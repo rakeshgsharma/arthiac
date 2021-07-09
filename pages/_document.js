@@ -5,6 +5,14 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <Script src="https://www.googletagmanager.com/gtag/js?id=UA-201763384-1"></Script>
+          <Script>
+            {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-201763384-1');`}
+          </Script>
           <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
           <link
             rel="icon"
@@ -34,14 +42,6 @@ class MyDocument extends Document {
             integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc"
             crossOrigin="anonymous"
           />
-          <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-201763384-1"></Script>
-          <Script>
-            {`window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-201763384-1');`}
-          </Script>
         </Head>
         <body className="antialiased text-black bg-white dark:bg-gray-900 dark:text-white">
           <Main />
