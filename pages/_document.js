@@ -34,13 +34,13 @@ class MyDocument extends Document {
             integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc"
             crossOrigin="anonymous"
           />
-          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-F8Z36YF19L"></Script>
+          <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-201763384-1"></Script>
           <Script>
             {`window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-F8Z36YF19L');`}
+            gtag('config', 'UA-201763384-1');`}
           </Script>
         </Head>
         <body className="antialiased text-black bg-white dark:bg-gray-900 dark:text-white">
