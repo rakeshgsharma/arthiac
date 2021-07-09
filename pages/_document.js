@@ -1,18 +1,22 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import Script from 'next/script'
 class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head>
-          <Script src="https://www.googletagmanager.com/gtag/js?id=UA-201763384-1"></Script>
-          <Script>
-            {`window.dataLayer = window.dataLayer || [];
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=UA-201763384-1`} />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
-            gtag('config', 'UA-201763384-1');`}
-          </Script>
+            gtag('config', 'UA-201763384-1', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
           <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
           <link
             rel="icon"
