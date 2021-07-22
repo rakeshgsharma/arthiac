@@ -11,6 +11,7 @@ module.exports = withPWA({
     fallbacks: {
       document: '/offline',
     },
+    mode: 'production',
   },
 })
 
