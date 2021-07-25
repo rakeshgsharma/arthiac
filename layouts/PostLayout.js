@@ -5,6 +5,7 @@ import { BlogSeo } from '@/components/SEO'
 import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
+// import SocialIcon from '@/components/social-icons'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
@@ -36,6 +37,13 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
               </dl>
               <div>
                 <PageTitle>{title}</PageTitle>
+                {/* <div className="flex justify-center">
+                  <SocialIcon
+                    kind="whatsapp"
+                    href="https://api.whatsapp.com/send?text=https://arthiac.com/blog/fpl-deep-dive-aston-villa"
+                    size="6"
+                  />
+                </div> */}
               </div>
             </div>
           </header>
