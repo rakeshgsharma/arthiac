@@ -3,8 +3,9 @@ import { PageSeo } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
+import ImageCard from '@/components/ImageCard'
 
-const MAX_DISPLAY = 5
+const MAX_DISPLAY = 9
 const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
 
 export async function getStaticProps() {
@@ -30,13 +31,20 @@ export default function Home({ posts }) {
             {siteMetadata.description}
           </p>
         </div>
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
+        <ul className="flex flex-wrap justify-center divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
+            const { slug, date, title, summary, tags, images } = frontMatter
             return (
-              <li key={slug} className="py-12">
-                <article>
+              <li key={slug} className="p-4 inline">
+                <ImageCard
+                  title={title}
+                  summary={summary}
+                  date={date}
+                  href={`/blog/${slug}`}
+                  imgSrc={images[0]}
+                />
+                {/* <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
                     <dl>
                       <dt className="sr-only">Published on</dt>
@@ -78,7 +86,7 @@ export default function Home({ posts }) {
                       </div>
                     </div>
                   </div>
-                </article>
+                </article>*/}
               </li>
             )
           })}
