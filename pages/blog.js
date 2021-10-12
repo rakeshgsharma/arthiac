@@ -2,8 +2,9 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import siteMetadata from '@/data/siteMetadata'
 import ListLayout from '@/layouts/ListLayout'
 import { PageSeo } from '@/components/SEO'
+import AdBanner from '@/components/AdBanner'
 
-export const POSTS_PER_PAGE = 10
+export const POSTS_PER_PAGE = 25
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
@@ -30,6 +31,7 @@ export default function Blog({ posts, initialDisplayPosts, pagination }) {
         pagination={pagination}
         title="All Posts"
       />
+      <AdBanner />
     </>
   )
 }

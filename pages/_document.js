@@ -17,6 +17,11 @@ class MyDocument extends Document {
           `,
             }}
           />
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7562980080729916"
+            crossOrigin="anonymous"
+          ></script>
           <link rel="manifest" href="/manifest.json" />
           <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
           <link
