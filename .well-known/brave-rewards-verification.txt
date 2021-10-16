@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: arthiac.com
+Token: ae77ea72184dfff4bca92b6eb1071ec8a216aab89261ff71a21f1982189989ab
